@@ -1,4 +1,4 @@
-﻿using Ejercicios2.Models;
+using Ejercicios2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +32,7 @@ namespace Ejercicios2
             
             Console.WriteLine("Ordenamiento por nombre");            
             var listaPorNombre = OrdenarPorNombre(lista);
-            ImprimirLista(listaNombre);
+            ImprimirLista(listaPorNombre);
             //Imprimir lista
             Console.WriteLine("Presione una tecla para terminar...");
             Console.ReadKey();
@@ -53,9 +53,9 @@ namespace Ejercicios2
                 new Models.Producto("Chocomilk", 23.5, "Otros")                 
             };
         }
-        
-        
-        static void ImprimirLista(List<Models.Producto> lista)
+
+
+        static void ImprimirLista(List<Models.Producto> milista)
         {
              Console.WriteLine("PRODUCTO   | PRECIO  |  TIPO");
             for (int i = 0; i < milista.Count; i++)
