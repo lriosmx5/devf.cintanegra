@@ -16,26 +16,29 @@ namespace Ejercicios2
             Console.WriteLine("Lista original");
             var lista = ObtenerProductos();
             ImprimirListaFormateada(lista);
-            Console.WriteLine("Presione una tecla para continuar...");
+            Console.WriteLine();
+            Console.WriteLine("Presione una tecla para continuar...");            
             Console.ReadKey();
-            
-            
+
+            Console.WriteLine();
             Console.WriteLine("Ordenamiento por precio");
             //Metodo por precio
              var milista = lista.OrderBy(o => o.Precio).ToList();
              ImprimirListaFormateada(milista);
-
+            Console.WriteLine();
             Console.WriteLine("Presione una tecla para continuar...");
             Console.ReadKey();
 
 
-            
+            Console.WriteLine();
             Console.WriteLine("Ordenamiento por nombre");            
             var listaPorNombre = OrdenarPorNombre(lista);
             ImprimirListaFormateada(listaPorNombre);
             //Imprimir lista
+            Console.WriteLine();
             Console.WriteLine("Presione una tecla para terminar...");
             Console.ReadKey();
+
         }
         
         static List<Models.Producto> OrdenarPorNombre(List<Models.Producto> lista)
