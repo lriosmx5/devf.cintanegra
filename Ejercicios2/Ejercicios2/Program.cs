@@ -60,7 +60,7 @@ namespace Ejercicios2
 
         static void ImprimirListaFormateada(List<Models.Producto> milista)
         {
-            var format = "{0,-25}|{1,10}|{2,-15}";
+            var format = "{0,-25} | {1,10} | {2,-15}";
             Console.WriteLine();
             
             Console.WriteLine(format,"NOMBRE","PRECIO","TIPO");
