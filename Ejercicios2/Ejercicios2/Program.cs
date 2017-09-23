@@ -13,34 +13,55 @@ namespace Ejercicios2
         {
 
             // ejercicio punto 4
-            Producto miprod;
-            List<Producto> milista = new List<Producto>();
-            Random aleatorio = new Random();
+            Console.WriteLine("Lista original");
+            var lista = ObtenerProductos();
+            ImprimirLista(lista);
+            Console.WriteLine("Presione una tecla para continuar...");
+            Console.ReadKey();
+            
+            
+            Console.WriteLine("Ordenamiento por precio");
+            //Metodo por precio
+             var milista = lista.OrderBy(o => o.Precio).ToList();
+             ImprimirLista(milista);
+
+            Console.WriteLine("Presione una tecla para continuar...");
+            Console.ReadKey();
 
 
-            for (int i = 0; i < 10; i++)
+            
+            Console.WriteLine("Ordenamiento por nombre");            
+            var listaPorNombre = OrdenarPorNombre(lista);
+            ImprimirLista(listaNombre);
+            //Imprimir lista
+            Console.WriteLine("Presione una tecla para terminar...");
+            Console.ReadKey();
+        }
+        
+        static List<Models.Producto> OrdenarPorNombre(List<Models.Producto> lista)
+        {
+            return lista.OrderBy(d => d.Nombre).ToList();
+        }
+
+        static List<Models.Producto> ObtenerProductos()
+        {
+            return new List<Models.Producto>
             {
-                miprod = new Producto();
-
-                miprod.Nombre = "Producto " + i.ToString();
-                miprod.Precio = (i + 1) * aleatorio.Next(1, 100); ;
-                miprod.Tipo = aleatorio.Next(1, 2).ToString();
-                milista.Add(miprod);
-            }
-
-            milista = milista.OrderBy(o => o.Precio).ToList();
-
-            Console.WriteLine("Ejercicio punto 4");
-            Console.WriteLine("PRODUCTO   | PRECIO  |  TIPO");
+                new Models.Producto("Calculador", 15.2, "Oficina" ) ,
+                new Models.Producto("Computadora", 25230.6, "Computacion") ,
+                new Models.Producto("Laptop", 22323, "Computación") ,
+                new Models.Producto("Chocomilk", 23.5, "Otros")                 
+            };
+        }
+        
+        
+        static void ImprimirLista(List<Models.Producto> lista)
+        {
+             Console.WriteLine("PRODUCTO   | PRECIO  |  TIPO");
             for (int i = 0; i < milista.Count; i++)
             {
                 Console.WriteLine(milista[i].Nombre + " | " + milista[i].Precio + " | " + milista[i].Tipo);
             }
-
-            Console.ReadLine();
-
-
-
         }
     }
 }
