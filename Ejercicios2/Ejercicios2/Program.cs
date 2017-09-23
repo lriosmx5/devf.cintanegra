@@ -15,7 +15,7 @@ namespace Ejercicios2
             // ejercicio punto 4
             Console.WriteLine("Lista original");
             var lista = ObtenerProductos();
-            ImprimirLista(lista);
+            ImprimirListaFormateada(lista);
             Console.WriteLine("Presione una tecla para continuar...");
             Console.ReadKey();
             
@@ -23,7 +23,7 @@ namespace Ejercicios2
             Console.WriteLine("Ordenamiento por precio");
             //Metodo por precio
              var milista = lista.OrderBy(o => o.Precio).ToList();
-             ImprimirLista(milista);
+             ImprimirListaFormateada(milista);
 
             Console.WriteLine("Presione una tecla para continuar...");
             Console.ReadKey();
@@ -32,7 +32,7 @@ namespace Ejercicios2
             
             Console.WriteLine("Ordenamiento por nombre");            
             var listaPorNombre = OrdenarPorNombre(lista);
-            ImprimirLista(listaPorNombre);
+            ImprimirListaFormateada(listaPorNombre);
             //Imprimir lista
             Console.WriteLine("Presione una tecla para terminar...");
             Console.ReadKey();
@@ -55,13 +55,17 @@ namespace Ejercicios2
         }
 
 
-        static void ImprimirLista(List<Models.Producto> milista)
+        static void ImprimirListaFormateada(List<Models.Producto> milista)
         {
-             Console.WriteLine("PRODUCTO   | PRECIO  |  TIPO");
+            var format = "{0,-25}|{1,10}|{2,-15}";
+            Console.WriteLine();
+            
+            Console.WriteLine(format,"NOMBRE","PRECIO","TIPO");
             for (int i = 0; i < milista.Count; i++)
             {
-                Console.WriteLine(milista[i].Nombre + " | " + milista[i].Precio + " | " + milista[i].Tipo);
+                Console.WriteLine(format, milista[i].Nombre, milista[i].Precio, milista[i].Tipo);                
             }
+            Console.WriteLine();
         }
     }
 }
