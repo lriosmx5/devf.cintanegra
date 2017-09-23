@@ -9,7 +9,7 @@ namespace Ejercicios2.Models
     public class Producto
     {
         public string Nombre { get; set; }
-        public string Precio { get; set; }
+        public double Precio { get; set; }
         public string Tipo { get; set; }
     }
 }
