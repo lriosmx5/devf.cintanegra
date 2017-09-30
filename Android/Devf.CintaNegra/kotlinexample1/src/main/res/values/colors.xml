@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="devfcolor">#6767cf</color>
+    <color name="calc1">#ffffff</color>
+    <color name="calc2">#262626</color>
+    <color name="calc3">#656060</color>
+    <color name="calc4">#1beccd</color>
+</resources>

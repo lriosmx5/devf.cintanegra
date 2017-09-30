@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">KotlinExample1</string>
+    <string name="text_input">Escribe tu password aqui</string>
+</resources>
