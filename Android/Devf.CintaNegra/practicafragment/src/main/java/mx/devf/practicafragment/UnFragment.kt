@@ -57,7 +57,7 @@ class UnFragment() : Fragment(), View.OnClickListener{
         txtDefault =  view.findViewById(R.id.txtDefault) as TextView
         //txtDefault?.setText(Texto)
         view.setOnClickListener(this)
-        view.setBackgroundColor(R.color.colorAccent)
+        view.setBackgroundResource(MyColor!!)
 
         return view
     }
