@@ -341,7 +341,8 @@ namespace Ejercicios2
             //    new bool[] {false, false, true, false },
             //    new bool[] {true, true, false, true }
             //});
-            var r = evenDigitsOnly(642386);
+            //var r = evenDigitsOnly(642386);
+            var r = variableName("bbb_ass");
             Console.WriteLine(r);
             Console.ReadLine();
             //// ejercicio punto 4
@@ -359,7 +360,7 @@ namespace Ejercicios2
             // ImprimirListaFormateada(milista);
             //Console.WriteLine();
             //Console.WriteLine("Presione una tecla para continuar...");
-            //Console.ReadKey();
+            //Console.ReadKey(); 
 
 
             //Console.WriteLine();
@@ -375,10 +376,21 @@ namespace Ejercicios2
 
         static bool variableName(string name)
         {
-
-            string pattern = @"([A-Z])\w+";
-            var check = new System.Text.RegularExpressions.Regex(pattern);
-            return check.IsMatch(name);
+            if (!Char.IsLetter(name[0])) return false;
+            foreach(var c in name)
+            {
+                if (Char.IsLetterOrDigit(c)) continue;
+                if (c == '_') continue;
+                return false;
+                    
+            }
+            return true;
+            //if (String.IsNullOrEmpty(name))
+            //    return false;
+            //string pattern = @"[A-Z|a-z|_]\w+$";
+            //var check = new System.Text.RegularExpressions.Regex(pattern);
+            //var r = check.Match(name);
+            //return r.Length == name.Length;
         }
 
         
