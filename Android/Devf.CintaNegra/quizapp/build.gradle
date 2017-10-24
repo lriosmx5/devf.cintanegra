@@ -6,7 +6,7 @@ android {
     buildToolsVersion "26.0.1"
 
     defaultConfig {
-        applicationId "mx.devf.navigationview"
+        applicationId "mx.devf.quizapp"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1

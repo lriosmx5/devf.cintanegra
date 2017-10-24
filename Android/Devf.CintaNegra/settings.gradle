@@ -1,1 +1,1 @@
-include ':app', ':kotlinexample1', ':conversor1', ':intents1', ':fragment1', ':practicafragment', ':navigationview'
+include ':app', ':kotlinexample1', ':conversor1', ':intents1', ':fragment1', ':practicafragment', ':navigationview', ':quizapp', ':persistenciadatos'
