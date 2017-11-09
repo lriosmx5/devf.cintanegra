@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), MyRecyclerAdapter.OnItemClickListener 
 
     fun setupRecyclerView()
     {
-        recyclerView = findViewById(R.id.recyclerView) as RecyclerView
+        recyclerView = findViewById(R.id.recyclerView)
         //recyclerView?.layoutManager  = LinearLayoutManager(this)
         recyclerView?.layoutManager  = GridLayoutManager(this, 2)
         recyclerView?.isVerticalScrollBarEnabled = true
